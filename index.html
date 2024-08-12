@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles.css" rel="stylesheet"/>
-    <title>tsuumi.xyz/</title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/cte.css">
 
-  <body>
-    <div class="header">
-      <h1>coming soon</h1>
-      <h2>i'll work on this tmr</h2>
-    </div>
-  </body>
+  <title>tsuumi</title>
+</head>
+<body>
+  <!-- BACKGROUND -->
+
+  <div id="particles-container"></div>
+  
+  <!-- AUDIO -->
+
+  <audio controls hidden loop>
+    <source src="assets/audio/song.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- ELEMENTS -->
+
+  <div id="content-container">
+    <div class="center title topbar">tsuumi.xyz</div>
+    <div class="center">♪ silentroom - shuu no hazama</div>
+  </div>
+  
+  <!-- SCRIPTS -->
+
+  <script src="/assets/particles.js/particles.min.js"></script>
+  <script src="/assets/particles.js/app.js"></script>
+  <script src="/assets/js/cte.js"></script>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.marquee.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    // var CTE = {};
+    CTE.callback = () => {
+      var aud = document.getElementsByTagName("audio")[0];
+      aud.volume = .3;
+      aud.play();
+    }
+    // CTE.callback();
+  </script>
+</body>
 </html>
