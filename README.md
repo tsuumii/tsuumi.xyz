@@ -7,4 +7,6 @@ do note that im gonna learn html and whatnot while making this so please bear wi
 
 the credits:
 
-none atm (expect this to fill up soon)
+particles.js
+verlox.cc (inspiration)
+silentroom - rainshower [music]
