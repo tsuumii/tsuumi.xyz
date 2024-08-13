@@ -24,7 +24,13 @@
 
   <div id="content-container">
     <div class="center title topbar">tsuumi.xyz</div>
-    <div class="center">♪ silentroom - shuu no hazama</div>
+    <div class="container">
+      <span id="typing" class="center"></span> 
+      <div class="music">♪ silentroom - rainshower (shuu no hazama)</div>
+    </div>
+    <div class="inline-container bottombar center">
+      <pre style="display: inline-block;">|<div style="vertical-align: middle;" id="marquee"></div>|</pre>
+    </div>
   </div>
   
   <!-- SCRIPTS -->
@@ -43,6 +49,32 @@
       var aud = document.getElementsByTagName("audio")[0];
       aud.volume = .3;
       aud.play();
+      
+      var typed = new Typed("#typing", {
+        strings: ["destroyer of clean codes", "terrified of all things women", "plays games for a living", "also does a LITTLE bit of graphic design", "dont talk to me irl pls", "tsuumi@proton.me"],
+        typeSpeed: 30,
+        backspeed: 30,
+        showCursor: false
+      });
+
+      var lines = [
+        { text: "instagram", link: "https://www.instagram.com/ttsuumii/" },
+        { text: "github", link: "https://github.com/tsuumii/" },
+        { text: "discord", link: "https://discord.gg/QgfKT6Tm" },
+        { text: "mail", link: "mailto:tsuumi@proton.me" },
+        { text: "credits", link: "#" }
+      ];
+
+      for (var x = 0; x < lines.length; x++) {
+        $("#marquee").append(`<a href="${lines[x].link}" target="_blank">${lines[x].text}</a>${(x < lines.length - 1 ? ' 🌧️ ' : '')}`);
+      }
+
+      $("#marquee").marquee({
+        duration: 7500,
+        gap: 100,
+        delayBeforeStart: 1000,
+        direction: 'left', 
+      });
     }
     // CTE.callback();
   </script>
